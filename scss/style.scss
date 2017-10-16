@@ -220,3 +220,29 @@ header {
     flex: 1;
   }
 }
+
+/* Footer */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #607d8b;
+  color: #fff;
+  padding: 20px 0;
+
+  p {
+    text-transform: uppercase;
+    font-size: 14px;
+    opacity: 0.6;
+    align-self: center;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+
+    li {
+      margin-left: 16px;
+    }
+  }
+}
