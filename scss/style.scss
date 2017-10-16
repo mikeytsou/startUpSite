@@ -87,12 +87,13 @@ header {
   align-items: center;
   padding: 35px 100px 0;
   font-weight: bold;
+  z-index: 1;
   animation: fadein 1s 0.5s forwards;
   opacity: 0;
   color: #000;
 
   h2 {
-    font-family: "Quicksand";
+    font-family: "Quicksand", sans-serif;
   }
 
   nav {
@@ -158,21 +159,23 @@ header {
 }
 
 /* Destinations */
-.destinations .grid li {
-  height: 350px;
-  padding: 20px;
-  list-style: none;
-  background-clip: content-box;
-  background-size: cover;
-  background-position: center;
-}
+.destinations .grid {
+  li {
+    height: 350px;
+    padding: 20px;
+    list-style: none;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+  }
 
-.destinations .grid li.small {
-  flex-basis: 30%;
-}
+  li.small {
+    flex-basis: 30%;
+  }
 
-.destinations .grid li.large {
-  flex-basis: 70%;
+  li.large {
+    flex-basis: 70%;
+  }
 }
 
 /* Packages */
@@ -243,6 +246,92 @@ footer {
 
     li {
       margin-left: 16px;
+    }
+  }
+}
+
+/* Media Query */
+@media (max-width: 1100px) {
+  /* Destinations */
+  .destinations .grid li.small, .destinations .grid li.large {
+    flex-basis: 50%;
+  }
+
+  /* Contact */
+  .contact form {
+    input {
+      flex-basis: 100%;
+      margin: 0 0 20px 0;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  section {
+    padding: 50px;
+  }
+
+  /* Header */
+  header {
+    padding: 20px 50px;
+    flex-direction: column;
+
+    h2 {
+      margin-bottom: 15px;
+    }
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 600px;
+
+    h1 {
+      font-size: 48px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    a.btn {
+      padding: 15px 40px;
+    }
+  }
+
+  /* Destinations */
+  .destinations .grid li.small, .destinations .grid li.large {
+    flex-basis: 100%;
+  }
+
+  /* Packages */
+  .packages .grid li {
+    flex-basis: 100%;
+    padding: 20px;
+  }
+
+  /* Testimonials */
+  .testimonials {
+    .quote {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+
+    .author {
+      font-size: 14px;
+    }
+  }
+
+  /* Footer */
+  footer {
+    flex-direction: column;
+
+    p {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    ul li {
+      margin: 0 8px;
     }
   }
 }
