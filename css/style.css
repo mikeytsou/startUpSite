@@ -36,6 +36,9 @@ section {
   align-items: center;
   padding: 100px 80px; }
 
+section:not(.hero):nth-child(even) {
+  background-color: #f5f5f5; }
+
 .grid {
   width: 100%;
   display: flex;
@@ -131,5 +134,17 @@ header {
 
 .destinations .grid li.large {
   flex-basis: 70%; }
+
+/* Packages */
+.packages .grid li {
+  padding: 50px;
+  flex-basis: 50%;
+  text-align: center;
+  list-style: none; }
+  .packages .grid li i {
+    color: #8c9eff; }
+  .packages .grid li h4 {
+    font-size: 30px;
+    margin: 25px 0; }
 
 /*# sourceMappingURL=style.css.map */
